@@ -82,7 +82,7 @@
 function makeExchange(currency) {
 	const obj = {};
 
-	if (currency > 0 &amp;&amp; currency < 10000) {
+	if (currency > 0 &amp;&amp; currency &lt; 10000) {
 			const objMoney = { &#39;H&#39; : 50, &#39;Q&#39; : 25, &#39;D&#39; : 10, &#39;N&#39; : 5, &#39;P&#39; : 1 };
 			let money = currency;
 
@@ -209,7 +209,6 @@ function makeExchange(currency) {
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
     <section class="education">
