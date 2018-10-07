@@ -66,7 +66,150 @@
                 <p>Белорусский: родной</p>
                 <p>Русский: родной</p>
                 <p>Английский: базовое</p>
+                <h3 class="text-center">Пример кода</h3>
+                <div class="row">
+                    <div class="col-2">
+                        <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">JavaScript</a>
+                            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">HTML</a>
+                            <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">CSS</a>
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                                <pre>
+function makeExchange(currency) {
+	const obj = {};
+
+	if (currency > 0 &amp;&amp; currency < 10000) {
+			const objMoney = { &#39;H&#39; : 50, &#39;Q&#39; : 25, &#39;D&#39; : 10, &#39;N&#39; : 5, &#39;P&#39; : 1 };
+			let money = currency;
+
+			for (key in objMoney) {
+					money = getCoinsCount(money, objMoney[key], key);
+			}
+
+			function getCoinsCount(money, equalCoin, nameCoin) {
+					let rem = money % equalCoin;
+					let quantityCoin = Math.floor(money / equalCoin);
+					if (quantityCoin > 0) {
+							obj[nameCoin] = quantityCoin;
+					}
+					return rem;
+			}
+			return obj;
+	} else if (currency >= 10000) {
+			obj.error = "You are rich,my friend!We don't have so much coins for exchange";
+			return obj;
+	} else {
+			return obj;
+	}
+}
+													</pre>
+                            </div>
+                            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                                <pre>
+&lt;section id="prices" ng-app="lpApp">
+	&lt;div class="container">
+			&lt;div class="lp-content" ng-controller="lpPriceCtrl">
+					&lt;h2>Цены&lt;/h2>
+					&lt;p ng-hide="prices || requestStatus 
+						 || requestStatusText" class="lp-prices-loader">
+							&lt;i class="fas fa-spinner">&lt;/i>
+					&lt;/p>
+					&lt;table ng-show="prices" class="table table-bordered table-striped">
+							&lt;thead>
+									&lt;tr>
+											&lt;th>№&lt;/th>
+											&lt;th ng-click="sortSet('name')">
+													&lt;span>Наименование&lt;/span>
+													&lt;i class="fas fa-sort" ng-show="sortBy != 'name'">&lt;/i>
+													&lt;i class="fas fa-sort-up" ng-show="sortBy == 'name' 
+													&amp;&amp; !sortRev">&lt;/i>
+													&lt;i class="fas fa-sort-down" ng-show="sortBy == 'name' 
+													&amp;&amp; sortRev">&lt;/i>
+											&lt;/th>
+											&lt;th ng-click="sortSet('price')">
+													&lt;span>Цена&lt;/span>
+													&lt;i class="fas fa-sort" ng-show="sortBy != 'price'">&lt;/i>
+													&lt;i class="fas fa-sort-up" ng-show="sortBy == 'price' 
+													&amp;&amp; !sortRev">&lt;/i>
+													&lt;i class="fas fa-sort-down" ng-show="sortBy == 'price' 
+													&amp;&amp; sortRev">&lt;/i>
+											&lt;/th>
+									 &lt;/tr>
+								&lt;/thead>
+								&lt;tbody>
+									 &lt;tr ng-repeat="price in prices | orderBy:sortBy:sortRev">
+											&lt;td>{{$index + 1}}&lt;/td>
+												&lt;td>
+													 &lt;span>{{price.name}}&lt;/span>
+											 &lt;/td>
+											 &lt;td>{{price.price | currency}}&lt;/td>
+										&lt;/tr>
+							 &lt;/tbody>
+					 &lt;/table>
+					 &lt;p ng-show="requestStatus || requestStatusText" class="alert alert-danger">
+					 Произошла ошибка {{requestStatus}} {{requestStatusText}}&lt;/p>
+			 &lt;/div>
+	 &lt;/div>
+&lt;/section>
+													</pre>
+                            </div>
+                            <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                                <pre>
+#t1 i {
+	color: #fc0b68;
+	font-size: 40px;
+	text-align: center;
+	line-height: 96px;
+	border: solid #fc0b68 ;
+	border-radius: 100px;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+}
+											 #t2 i {
+	color: white;
+	font-size: 40px;
+	text-align: center;
+	line-height: 96px;
+	background: linear-gradient( to top left, #000, #fc0b68);
+	border-radius: 100px;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+}
+
+#t2 p {
+	text-align: center;
+	font-size: 20px;
+}
+
+#t2 td {
+	text-align: center;
+
+}
+#t2 i:hover {
+	animation: icons 2s linear infinite;
+}
+@keyframes icons {
+	 from {
+			transform: rotateY(0deg)
+	}
+	to {
+			transform: rotateY(360deg)
+	}
+	
+}
+												</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
         </div>
     </section>
 </body>
