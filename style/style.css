@@ -28,3 +28,16 @@ i {
 section.skills p {
     padding: 0 20px;
 }
+
+education a {
+    color: #000000;
+    text-decoration: none;
+}
+
+section.education div.content {
+    padding: 0 20px;
+}
+
+section.education div.content a.btn {
+    color: #ffffff;
+}
