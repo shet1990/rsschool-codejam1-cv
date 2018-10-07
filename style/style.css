@@ -15,3 +15,12 @@ h2 {
     font-size: 20px;
     padding: 0 12px;
 }
+
+i {
+    color: #0000ff;
+}
+
+.name p {
+    font-weight: bold;
+    font-style: italic;
+}
