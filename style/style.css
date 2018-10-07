@@ -24,3 +24,7 @@ i {
     font-weight: bold;
     font-style: italic;
 }
+
+section.skills p {
+    padding: 0 20px;
+}
