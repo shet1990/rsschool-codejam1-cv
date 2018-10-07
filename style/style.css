@@ -35,9 +35,19 @@ education a {
 }
 
 section.education div.content {
-    padding: 0 20px;
+    padding: 20px;
 }
 
 section.education div.content a.btn {
     color: #ffffff;
+}
+
+footer div.content {
+    background: #cfd1d6;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    margin: 0;
 }
