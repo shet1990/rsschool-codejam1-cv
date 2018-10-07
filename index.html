@@ -112,48 +112,48 @@ function makeExchange(currency) {
                                 <pre>
 &lt;section id="prices" ng-app="lpApp">
 	&lt;div class="container">
-			&lt;div class="lp-content" ng-controller="lpPriceCtrl">
-					&lt;h2>Цены&lt;/h2>
-					&lt;p ng-hide="prices || requestStatus 
-						 || requestStatusText" class="lp-prices-loader">
-							&lt;i class="fas fa-spinner">&lt;/i>
-					&lt;/p>
-					&lt;table ng-show="prices" class="table table-bordered table-striped">
-							&lt;thead>
-									&lt;tr>
-											&lt;th>№&lt;/th>
-											&lt;th ng-click="sortSet('name')">
-													&lt;span>Наименование&lt;/span>
-													&lt;i class="fas fa-sort" ng-show="sortBy != 'name'">&lt;/i>
-													&lt;i class="fas fa-sort-up" ng-show="sortBy == 'name' 
-													&amp;&amp; !sortRev">&lt;/i>
-													&lt;i class="fas fa-sort-down" ng-show="sortBy == 'name' 
-													&amp;&amp; sortRev">&lt;/i>
-											&lt;/th>
-											&lt;th ng-click="sortSet('price')">
-													&lt;span>Цена&lt;/span>
-													&lt;i class="fas fa-sort" ng-show="sortBy != 'price'">&lt;/i>
-													&lt;i class="fas fa-sort-up" ng-show="sortBy == 'price' 
-													&amp;&amp; !sortRev">&lt;/i>
-													&lt;i class="fas fa-sort-down" ng-show="sortBy == 'price' 
-													&amp;&amp; sortRev">&lt;/i>
-											&lt;/th>
-									 &lt;/tr>
-								&lt;/thead>
-								&lt;tbody>
-									 &lt;tr ng-repeat="price in prices | orderBy:sortBy:sortRev">
-											&lt;td>{{$index + 1}}&lt;/td>
-												&lt;td>
-													 &lt;span>{{price.name}}&lt;/span>
-											 &lt;/td>
-											 &lt;td>{{price.price | currency}}&lt;/td>
-										&lt;/tr>
-							 &lt;/tbody>
-					 &lt;/table>
-					 &lt;p ng-show="requestStatus || requestStatusText" class="alert alert-danger">
-					 Произошла ошибка {{requestStatus}} {{requestStatusText}}&lt;/p>
-			 &lt;/div>
-	 &lt;/div>
+		&lt;div class="lp-content" ng-controller="lpPriceCtrl">
+			&lt;h2>Цены&lt;/h2>
+				&lt;p ng-hide="prices || requestStatus 
+					|| requestStatusText" class="lp-prices-loader">
+					&lt;i class="fas fa-spinner">&lt;/i>
+				&lt;/p>
+				&lt;table ng-show="prices" class="table table-bordered table-striped">
+					&lt;thead>
+							&lt;tr>
+								&lt;th>№&lt;/th>
+								&lt;th ng-click="sortSet('name')">
+									&lt;span>Наименование&lt;/span>
+									&lt;i class="fas fa-sort" ng-show="sortBy != 'name'">&lt;/i>
+									&lt;i class="fas fa-sort-up" ng-show="sortBy == 'name' 
+									&amp;&amp; !sortRev">&lt;/i>
+									&lt;i class="fas fa-sort-down" ng-show="sortBy == 'name' 
+									&amp;&amp; sortRev">&lt;/i>
+										&lt;/th>
+										&lt;th ng-click="sortSet('price')">
+											&lt;span>Цена&lt;/span>
+												&lt;i class="fas fa-sort" ng-show="sortBy != 'price'">&lt;/i>
+												&lt;i class="fas fa-sort-up" ng-show="sortBy == 'price' 
+												&amp;&amp; !sortRev">&lt;/i>
+												&lt;i class="fas fa-sort-down" ng-show="sortBy == 'price' 
+												&amp;&amp; sortRev">&lt;/i>
+										&lt;/th>
+									&lt;/tr>
+							&lt;/thead>
+							&lt;tbody>
+								&lt;tr ng-repeat="price in prices | orderBy:sortBy:sortRev">
+									&lt;td>{{$index + 1}}&lt;/td>
+										&lt;td>
+											&lt;span>{{price.name}}&lt;/span>
+										&lt;/td>
+										&lt;td>{{price.price | currency}}&lt;/td>
+								&lt;/tr>
+							&lt;/tbody>
+				&lt;/table>
+			&lt;p ng-show="requestStatus || requestStatusText" class="alert alert-danger">
+			Произошла ошибка {{requestStatus}} {{requestStatusText}}&lt;/p>
+		&lt;/div>
+	&lt;/div>
 &lt;/section>
 													</pre>
                             </div>
@@ -242,7 +242,6 @@ function makeExchange(currency) {
             </div>
         </div>
     </section>
-
 </body>
 
 </html>
